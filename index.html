@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6d5bdd">
+  <meta name="description" content="Курс о системах, в которых управляющий сменой находит показатели ресторана.">
+  <title>Источники показателей</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav id="top-nav" class="hidden" aria-label="Навигация по курсу">
+    <div class="nav-inner">
+      <button class="nav-home" type="button" onclick="go('home')">⌂ Содержание</button>
+      <span id="nav-title"></span><span id="nav-count"></span>
+    </div>
+    <div class="progress-track"><div id="progress"></div></div>
+  </nav>
+  <main>
+    <section class="page active" id="page-home">
+      <header class="home-hero">
+        <div class="hero-copy"><span class="eyebrow light">Продолжение курса «Показатели ресторана»</span><h1>Источники<br>показателей</h1><p>От нужного вопроса — к нужной системе</p></div>
+        <div class="hero-orbit" aria-hidden="true"><span>B&amp;B</span><span>АП</span><span>КА</span><span>БКЛ</span><b>?</b></div>
+      </header>
+      <div class="wrap home-wrap">
+        <section class="intro-card reveal">
+          <span class="eyebrow">Зачем этот курс</span><h2>Показатель полезен, только если ты знаешь, где его найти</h2>
+          <p>В первом курсе ты разобрался, что означают выручка, средний чек, скорость, затраты и другие показатели. Теперь свяжем эти цифры с рабочими программами ресторана.</p>
+          <div class="route"><span>Вопрос на смене</span><i>→</i><span>Нужная система</span><i>→</i><span>Данные</span><i>→</i><span>Действие</span></div>
+        </section>
+        <section class="map reveal">
+          <div class="duration"><div><span>Время прохождения</span><small>4 демонстрации + итог</small></div><strong>≈ 20 минут</strong></div>
+          <div class="module-grid">
+            <button onclick="go('brave')"><em>01 · Аналитика</em><strong>Brave&amp;Bold</strong><span>Цели, динамика и зоны роста</span><i>→</i></button>
+            <button onclick="go('admin')"><em>02 · Операции</em><strong>АдминПанель</strong><span>Продажи, списания и процессы</span><i>→</i></button>
+            <button onclick="go('kingauto')"><em>03 · Скорость</em><strong>КингАвто</strong><span>Время прохождения заказа</span><i>→</i></button>
+            <button onclick="go('logist')"><em>04 · Доставка</em><strong>БК Логист</strong><span>Курьеры, зоны и назначения</span><i>→</i></button>
+            <button class="wide" onclick="go('summary')"><em>05 · Итог</em><strong>Выбери источник</strong><span>Закрепи маршрут от вопроса к данным</span><i>→</i></button>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="page" id="page-brave">
+      <header class="chapter-hero violet"><div><span>01 / 05 · Аналитика</span><h1>Brave&amp;Bold</h1><p>Увидеть картину по ресторану и найти точку внимания</p></div></header>
+      <div class="wrap lesson">
+        <section class="lead reveal"><span class="eyebrow">Перед просмотром</span><h2>Сначала вопрос — потом показатель</h2><p>Brave&amp;Bold собирает ключевые результаты ресторана в одном месте. Здесь удобно сравнить цель и факт, оценить динамику и понять, в каком процессе искать причину отклонения.</p></section>
+        <section class="look-grid reveal"><article><b>01</b><h3>Цели</h3><p>Проверь цели на смену, неделю или месяц и сопоставь их с фактом.</p></article><article><b>02</b><h3>Динамика</h3><p>Смотри не только значение, но и изменение к сопоставимому периоду.</p></article><article><b>03</b><h3>Процессы</h3><p>Переходи от общего результата к выручке, скорости и Гостевому опыту.</p></article></section>
+        <aside class="focus reveal"><strong>Смотри скринкаст с вопросом:</strong><p>как быстро понять, какой показатель требует внимания именно сейчас?</p></aside>
+        <div class="video-placeholder reveal" role="img" aria-label="Место для скринкаста Brave and Bold"><div class="play">▶</div><strong>Скринкаст: Brave&amp;Bold</strong><span>Видео будет добавлено в системе обучения</span><small>Оригинал: 5:59</small></div>
+        <section class="after reveal"><span>После просмотра ты сможешь</span><p>найти цели ресторана, прочитать карточки показателей и перейти к деталям по процессу.</p></section>
+        <div class="chapter-nav"><button onclick="go('home')">К содержанию</button><button class="next" onclick="go('admin')">Следующая глава →</button></div>
+      </div>
+    </section>
+
+    <section class="page" id="page-admin">
+      <header class="chapter-hero orange"><div><span>02 / 05 · Операции</span><h1>АдминПанель</h1><p>Проверить, из каких операций сложился результат</p></div></header>
+      <div class="wrap lesson">
+        <section class="lead reveal"><span class="eyebrow">Перед просмотром</span><h2>Здесь показатели встречаются с процессами</h2><p>АдминПанель помогает перейти от общей цифры к операционным данным: продажам и выручке, списаниям и расходу блюд, отменам, заказам киоска и настройкам, которые влияют на работу ресторана.</p></section>
+        <section class="split reveal"><div><span>Отчёты</span><h3>Понять, что произошло</h3><ul><li>выручка и продажи по получасам;</li><li>расход блюд и списания;</li><li>отмены и другие отклонения.</li></ul></div><div><span>Инструменты</span><h3>Поддержать процесс</h3><ul><li>стоп-лист;</li><li>заказы киоска;</li><li>списки и настройки сотрудников.</li></ul></div></section>
+        <aside class="focus reveal"><strong>Смотри скринкаст с вопросом:</strong><p>какой отчёт или раздел даст факты для разбора конкретного отклонения?</p></aside>
+        <div class="video-placeholder reveal" role="img" aria-label="Место для скринкаста АдминПанели"><div class="play">▶</div><strong>Скринкаст: АдминПанель</strong><span>Видео будет добавлено в системе обучения</span><small>Оригинал: 6:23</small></div>
+        <section class="after reveal"><span>После просмотра ты сможешь</span><p>выбрать нужный операционный отчёт и проверить данные, которые стоят за итоговым показателем.</p></section>
+        <div class="chapter-nav"><button onclick="go('brave')">← Назад</button><button class="next" onclick="go('kingauto')">Следующая глава →</button></div>
+      </div>
+    </section>
+
+    <section class="page" id="page-kingauto">
+      <header class="chapter-hero green"><div><span>03 / 05 · Скорость</span><h1>КингАвто</h1><p>Контролировать путь заказа по этапам обслуживания</p></div></header>
+      <div class="wrap lesson">
+        <section class="lead reveal"><span class="eyebrow">Перед просмотром</span><h2>Общее время складывается из этапов</h2><p>Экран КингАвто показывает текущую и среднюю скорость обслуживания: общее время, приём, оплату, сборку и выдачу. Цвет помогает быстро заметить этап, который вышел за целевое значение.</p></section>
+        <section class="metric-path reveal" aria-label="Этапы обслуживания"><span>Приём</span><i>→</i><span>Оплата</span><i>→</i><span>Сборка + выдача</span><i>→</i><strong>Общее время</strong></section>
+        <aside class="focus reveal"><strong>Смотри скринкаст с вопросом:</strong><p>на каком этапе возникает задержка и куда направить внимание команды?</p></aside>
+        <div class="video-placeholder reveal" role="img" aria-label="Место для скринкаста КингАвто"><div class="play">▶</div><strong>Скринкаст: КингАвто</strong><span>Видео будет добавлено в системе обучения</span><small>Оригинал: 0:33</small></div>
+        <section class="after reveal"><span>После просмотра ты сможешь</span><p>сопоставить фактическое время с целью и определить этап, который замедляет обслуживание.</p></section>
+        <div class="chapter-nav"><button onclick="go('admin')">← Назад</button><button class="next" onclick="go('logist')">Следующая глава →</button></div>
+      </div>
+    </section>
+
+    <section class="page" id="page-logist">
+      <header class="chapter-hero blue"><div><span>04 / 05 · Доставка</span><h1>БК Логист</h1><p>Проверить курьеров, зоны доставки и назначение заказов</p></div></header>
+      <div class="wrap lesson">
+        <section class="lead reveal"><span class="eyebrow">Перед просмотром</span><h2>Если заказ не назначается, проверь цепочку</h2><p>БК Логист помогает управлять собственной доставкой. В системе можно проверить активность курьеров, их транспорт и привязку к ресторану, а также увидеть заказы в зоне доставки.</p></section>
+        <section class="check-chain reveal"><article><b>1</b><span>Заказ входит в зону доставки?</span></article><article><b>2</b><span>Есть активный курьер?</span></article><article><b>3</b><span>Подходит тип транспорта?</span></article><article><b>4</b><span>Назначение прошло корректно?</span></article></section>
+        <aside class="focus reveal"><strong>Смотри скринкаст с вопросом:</strong><p>что последовательно проверить, если система не назначила заказ курьеру?</p></aside>
+        <div class="video-placeholder reveal" role="img" aria-label="Место для скринкаста БК Логист"><div class="play">▶</div><strong>Скринкаст: БК Логист</strong><span>Видео будет добавлено в системе обучения</span><small>Оригинал: 2:37</small></div>
+        <section class="after reveal"><span>После просмотра ты сможешь</span><p>проверить данные курьера и локализовать причину, по которой заказ не назначился.</p></section>
+        <div class="chapter-nav"><button onclick="go('kingauto')">← Назад</button><button class="next" onclick="go('summary')">К итогу →</button></div>
+      </div>
+    </section>
+
+    <section class="page" id="page-summary">
+      <header class="chapter-hero dark"><div><span>05 / 05 · Итог</span><h1>От вопроса<br>к источнику</h1><p>Выбери систему, которая даст нужные данные</p></div></header>
+      <div class="wrap lesson">
+        <section class="lead reveal"><span class="eyebrow">Главное</span><h2>Системы дополняют друг друга</h2><p>Начни с общей картины, затем переходи к деталям процесса. Так решение будет опираться не на одну цифру, а на связанный набор фактов.</p></section>
+        <section class="system-summary reveal"><article><b>Brave&amp;Bold</b><span>Куда направить внимание?</span></article><article><b>АдминПанель</b><span>Из чего сложился результат?</span></article><article><b>КингАвто</b><span>Где теряется время?</span></article><article><b>БК Логист</b><span>Почему не назначен заказ?</span></article></section>
+        <section class="quiz reveal"><span class="eyebrow">Проверка</span><h2>Подбери источник для каждой ситуации</h2>
+          <label>Нужно сравнить цель и факт по ключевым показателям<select data-answer="brave"><option value="">Выбери систему</option><option value="admin">АдминПанель</option><option value="brave">Brave&amp;Bold</option><option value="king">КингАвто</option><option value="logist">БК Логист</option></select></label>
+          <label>Нужно выяснить, на каком этапе растёт время обслуживания<select data-answer="king"><option value="">Выбери систему</option><option value="admin">АдминПанель</option><option value="brave">Brave&amp;Bold</option><option value="king">КингАвто</option><option value="logist">БК Логист</option></select></label>
+          <label>Нужно проверить расход блюд, продажи или отмены<select data-answer="admin"><option value="">Выбери систему</option><option value="admin">АдминПанель</option><option value="brave">Brave&amp;Bold</option><option value="king">КингАвто</option><option value="logist">БК Логист</option></select></label>
+          <label>Заказ доставки не назначается курьеру<select data-answer="logist"><option value="">Выбери систему</option><option value="admin">АдминПанель</option><option value="brave">Brave&amp;Bold</option><option value="king">КингАвто</option><option value="logist">БК Логист</option></select></label>
+          <button class="check" type="button" onclick="checkQuiz()">Проверить</button><div id="feedback" class="feedback" aria-live="polite"></div>
+        </section>
+        <section class="completion reveal"><span>✓</span><div><h2>Курс пройден</h2><p>Теперь ты знаешь, где искать показатели и детали процессов.</p></div><button id="complete" onclick="completeCourse()">Завершить</button></section>
+        <div class="chapter-nav"><button onclick="go('logist')">← Назад</button><button onclick="go('home')">К содержанию</button></div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
