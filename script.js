@@ -4,7 +4,7 @@ function go(id){
   if(id!=='home'&&!pages.includes(id))return;
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   const activePage=document.getElementById('page-'+id);activePage?.classList.add('active');
-  const video=activePage?.querySelector('iframe[data-src]');if(video&&!video.src)video.src=video.dataset.src;
+  const video=activePage?.querySelector('video[data-src]');if(video&&!video.getAttribute('src')){video.src=video.dataset.src;video.load()}
   const nav=document.getElementById('top-nav');nav.classList.toggle('hidden',id==='home');
   if(id!=='home'){const i=pages.indexOf(id);document.getElementById('nav-title').textContent=titles[id];document.getElementById('nav-count').textContent=`${i+1} / ${pages.length}`;document.getElementById('progress').style.width=`${((i+1)/pages.length)*100}%`}
   history.replaceState({},'',id==='home'?location.pathname:'#'+id);scrollTo({top:0,behavior:'instant'});
