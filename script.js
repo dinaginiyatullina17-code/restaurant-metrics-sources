@@ -3,7 +3,8 @@ const titles={brave:'Brave&Bold',admin:'АдминПанель',kingauto:'Кин
 function go(id){
   if(id!=='home'&&!pages.includes(id))return;
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  document.getElementById('page-'+id)?.classList.add('active');
+  const activePage=document.getElementById('page-'+id);activePage?.classList.add('active');
+  const video=activePage?.querySelector('iframe[data-src]');if(video&&!video.src)video.src=video.dataset.src;
   const nav=document.getElementById('top-nav');nav.classList.toggle('hidden',id==='home');
   if(id!=='home'){const i=pages.indexOf(id);document.getElementById('nav-title').textContent=titles[id];document.getElementById('nav-count').textContent=`${i+1} / ${pages.length}`;document.getElementById('progress').style.width=`${((i+1)/pages.length)*100}%`}
   history.replaceState({},'',id==='home'?location.pathname:'#'+id);scrollTo({top:0,behavior:'instant'});
