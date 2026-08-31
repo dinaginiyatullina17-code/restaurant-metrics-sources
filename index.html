@@ -32,11 +32,11 @@
         <section class="map reveal">
           <div class="duration" aria-label="Время прохождения курса — около 20 минут"><strong>Около 20 минут на весь курс</strong></div>
           <div class="module-grid">
-            <button onclick="go('brave')"><em>01 · Аналитика</em><strong>Brave&amp;Bold</strong><span>Цели, динамика и зоны роста</span><i>→</i></button>
-            <button onclick="go('admin')"><em>02 · Операции</em><strong>АдминПанель</strong><span>Продажи, списания и процессы</span><i>→</i></button>
-            <button onclick="go('kingauto')"><em>03 · Скорость</em><strong>КингАвто</strong><span>Время прохождения заказа</span><i>→</i></button>
-            <button onclick="go('logist')"><em>04 · Доставка</em><strong>БК Логист</strong><span>Курьеры, зоны и назначения</span><i>→</i></button>
-            <button class="wide" onclick="go('summary')"><em>05 · Итог</em><strong>Выбери источник</strong><span>Закрепи маршрут от вопроса к данным</span><i>→</i></button>
+            <button data-page="brave" onclick="go('brave')"><em>01 · Аналитика</em><strong>Brave&amp;Bold</strong><span>Цели, динамика и зоны роста</span><i>→</i></button>
+            <button data-page="admin" onclick="go('admin')"><em>02 · Операции</em><strong>АдминПанель</strong><span>Продажи, списания и процессы</span><i>→</i></button>
+            <button data-page="kingauto" onclick="go('kingauto')"><em>03 · Скорость</em><strong>КингАвто</strong><span>Время прохождения заказа</span><i>→</i></button>
+            <button data-page="logist" onclick="go('logist')"><em>04 · Доставка</em><strong>БК Логист</strong><span>Курьеры, зоны и назначения</span><i>→</i></button>
+            <button class="wide" data-page="summary" onclick="go('summary')"><em>05 · Итог</em><strong>Выбери источник</strong><span>Закрепи маршрут от вопроса к данным</span><i>→</i></button>
           </div>
         </section>
       </div>
@@ -52,7 +52,7 @@
           <video title="БнБ для управляющего сменой 1" controls preload="metadata" playsinline poster="https://bktube.burgerkingrus.ru/lazy-static/thumbnails/8b2b2fe9-7339-4bba-bf39-ecebaa6f31e8.jpg" data-src="https://bktube.burgerkingrus.ru/static/streaming-playlists/hls/05f9c764-f6e2-49b1-89fe-ea728a6dfdcb/938610c8-fcc0-4e78-8958-4647e7d79c67-720-fragmented.mp4"></video>
         </div>
         <section class="after reveal"><span>После просмотра ты сможешь</span><p>найти цели ресторана, основные показатели и нужный раздел с данными по процессам.</p></section>
-        <div class="chapter-nav"><button onclick="go('home')">К содержанию</button><button class="next" onclick="go('admin')">Следующая глава →</button></div>
+        <div class="chapter-nav"><button onclick="go('home')">К содержанию</button><button class="next" onclick="advance('admin')">Следующая глава →</button></div>
       </div>
     </section>
 
@@ -66,7 +66,7 @@
           <video title="АдминПанель для управляющего сменой" controls preload="metadata" playsinline poster="https://bktube.burgerkingrus.ru/lazy-static/thumbnails/be7e3e37-f4b4-464f-8916-d6d7accb590b.jpg" data-src="https://bktube.burgerkingrus.ru/static/streaming-playlists/hls/f3b54565-5a99-4502-8649-325af9a03a0f/c2dd8eb8-4e2c-47db-9fe7-d12f9a47f980-720-fragmented.mp4"></video>
         </div>
         <section class="after reveal"><span>После просмотра ты сможешь</span><p>выбрать нужный операционный отчёт и проверить данные, которые стоят за итоговым показателем.</p></section>
-        <div class="chapter-nav"><button onclick="go('brave')">← Назад</button><button class="next" onclick="go('kingauto')">Следующая глава →</button></div>
+        <div class="chapter-nav"><button onclick="go('brave')">← Назад</button><button class="next" onclick="advance('kingauto')">Следующая глава →</button></div>
       </div>
     </section>
 
@@ -80,7 +80,7 @@
           <video title="Кинг Авто для управляющего сменой" controls preload="metadata" playsinline poster="https://bktube.burgerkingrus.ru/lazy-static/thumbnails/d0b736ec-2d3f-4fc5-b116-8f33bf3ed32c.jpg" data-src="https://bktube.burgerkingrus.ru/static/streaming-playlists/hls/e1179445-2136-4472-9418-81d005480492/7be5ba02-83bc-418c-b74b-0321ca7f7617-720-fragmented.mp4"></video>
         </div>
         <section class="after reveal"><span>После просмотра ты сможешь</span><p>найти на экране общее время обслуживания и значения по отдельным этапам.</p></section>
-        <div class="chapter-nav"><button onclick="go('admin')">← Назад</button><button class="next" onclick="go('logist')">Следующая глава →</button></div>
+        <div class="chapter-nav"><button onclick="go('admin')">← Назад</button><button class="next" onclick="advance('logist')">Следующая глава →</button></div>
       </div>
     </section>
 
@@ -91,10 +91,10 @@
         <section class="check-chain reveal"><article><b>1</b><span>Заказ входит в зону доставки?</span></article><article><b>2</b><span>Есть активный курьер?</span></article><article><b>3</b><span>Подходит тип транспорта?</span></article><article><b>4</b><span>Назначение прошло корректно?</span></article></section>
         <aside class="focus reveal"><strong>Во время просмотра обрати внимание:</strong><p>что последовательно проверить, если система не назначила заказ курьеру.</p></aside>
         <div class="video-embed reveal">
-          <iframe title="Бк Логист для управляющего сменой" width="100%" height="100%" src="https://bktube.burgerkingrus.ru/videos/embed/uiX2uGBUBYEH8FCdbAvweG?title=0&amp;warningTitle=0&amp;peertubeLink=0&amp;p2p=0" frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts allow-popups allow-forms" style="position:absolute;inset:0"></iframe>
+          <iframe title="Бк Логист для управляющего сменой" width="100%" height="100%" src="https://bktube.burgerkingrus.ru/videos/embed/uiX2uGBUBYEH8FCdbAvweG?title=0&amp;warningTitle=0&amp;peertubeLink=0&amp;p2p=0" data-src="https://bktube.burgerkingrus.ru/videos/embed/uiX2uGBUBYEH8FCdbAvweG?title=0&amp;warningTitle=0&amp;peertubeLink=0&amp;p2p=0" frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts allow-popups allow-forms" style="position:absolute;inset:0"></iframe>
         </div>
         <section class="after reveal"><span>После просмотра ты сможешь</span><p>проверить данные курьера и локализовать причину, по которой заказ не назначился.</p></section>
-        <div class="chapter-nav"><button onclick="go('kingauto')">← Назад</button><button class="next" onclick="go('summary')">К итогу →</button></div>
+        <div class="chapter-nav"><button onclick="go('kingauto')">← Назад</button><button class="next" onclick="advance('summary')">К итогу →</button></div>
       </div>
     </section>
 
@@ -120,7 +120,7 @@
           <button class="check" type="button" onclick="checkQuiz()">Проверить</button><div id="feedback" class="feedback" aria-live="polite"></div>
         </section>
         <aside class="next-course reveal"><span class="eyebrow">Что дальше</span><h2>Не нашёл нужную программу?</h2><p>В этом курсе мы разобрали системы, связанные с основными показателями ресторана. Другие рабочие программы ты изучишь дальше по треку — в курсе «Работа в программах».</p></aside>
-        <section class="completion reveal"><span>✓</span><div><h2>Курс пройден</h2><p>Теперь ты знаешь, где искать показатели и детали процессов.</p></div><button id="complete" onclick="completeCourse()">Завершить</button></section>
+        <section class="completion reveal" id="completion"><span>✓</span><div><h2 id="completion-title">Завершение курса</h2><p id="completion-text">Пройди итоговую проверку и нажми «Завершить».</p></div><button id="complete" onclick="completeCourse()">Завершить</button></section>
         <div class="chapter-nav"><button onclick="go('logist')">← Назад</button><button onclick="go('home')">К содержанию</button></div>
       </div>
     </section>
