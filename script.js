@@ -1,13 +1,13 @@
 const pages=['brave','admin','kingauto','logist','summary'];
 const titles={brave:'Brave&Bold',admin:'АдминПанель',kingauto:'КингАвто',logist:'БК Логист',summary:'Итог'};
-const unlockKey='restaurant_sources_unlocked';
+const unlockKey='restaurant_sources_unlocked_v2';
 let unlocked=Number(localStorage.getItem(unlockKey)||0);
 function stopMedia(){
   document.querySelectorAll('video').forEach(video=>{video.pause()});
   document.querySelectorAll('iframe[data-src]').forEach(frame=>{if(frame.src&&frame.src!=='about:blank')frame.src='about:blank'});
   document.querySelectorAll('.video-embed').forEach(embed=>embed.classList.remove('is-playing'));
 }
-function playVideo(button){const embed=button.closest('.video-embed'),video=embed?.querySelector('video'),frame=embed?.querySelector('iframe');embed?.classList.add('is-playing');if(video){const result=video.play();result?.catch?.(()=>embed.classList.remove('is-playing'))}else if(frame){if(frame.src==='about:blank')frame.src=frame.dataset.src;setTimeout(()=>frame.contentWindow?.postMessage({method:'play'},'*'),450)}}
+function playVideo(button){const embed=button.closest('.video-embed'),video=embed?.querySelector('video'),frame=embed?.querySelector('iframe');embed?.classList.add('is-playing');if(video){const result=video.play();result?.catch?.(()=>embed.classList.remove('is-playing'))}else if(frame){frame.src=frame.dataset.src}}
 function applyLocks(){
   document.querySelectorAll('.module-grid [data-page]').forEach(button=>{const locked=pages.indexOf(button.dataset.page)>unlocked;button.disabled=locked;button.setAttribute('aria-disabled',String(locked));const icon=button.querySelector('i');if(icon)icon.textContent=locked?'●':'→'});
 }
@@ -18,7 +18,6 @@ function go(id){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   const activePage=document.getElementById('page-'+id);activePage?.classList.add('active');
   const video=activePage?.querySelector('video[data-src]');if(video&&!video.getAttribute('src')){video.src=video.dataset.src;video.load()}
-  const frame=activePage?.querySelector('iframe[data-src]');if(frame)frame.src=frame.dataset.src;
   const nav=document.getElementById('top-nav');nav.classList.toggle('hidden',id==='home');
   if(id!=='home'){const i=pages.indexOf(id);document.getElementById('nav-title').textContent=titles[id];document.getElementById('nav-count').textContent=`${i+1} / ${pages.length}`;document.getElementById('progress').style.width=`${((i+1)/pages.length)*100}%`}
   history.replaceState({},'',id==='home'?location.pathname:'#'+id);scrollTo({top:0,behavior:'instant'});
