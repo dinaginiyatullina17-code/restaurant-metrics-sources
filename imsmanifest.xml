@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<manifest identifier="restaurant-metrics-sources" version="1.0"
+<manifest identifier="istochniki-pokazateley" version="1.0"
   xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
   xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -8,16 +8,16 @@
     <schema>ADL SCORM</schema>
     <schemaversion>1.2</schemaversion>
   </metadata>
-  <organizations default="course-org">
-    <organization identifier="course-org">
+  <organizations default="istochniki-pokazateley-org">
+    <organization identifier="istochniki-pokazateley-org">
       <title>Источники показателей</title>
-      <item identifier="course-item" identifierref="course-resource">
+      <item identifier="istochniki-pokazateley-item" identifierref="istochniki-pokazateley-resource">
         <title>Источники показателей</title>
       </item>
     </organization>
   </organizations>
   <resources>
-    <resource identifier="course-resource" type="webcontent" adlcp:scormtype="sco" href="index.html">
+    <resource identifier="istochniki-pokazateley-resource" type="webcontent" adlcp:scormtype="sco" href="index.html">
       <file href="index.html"/>
       <file href="script.js"/>
       <file href="scorm.js"/>
