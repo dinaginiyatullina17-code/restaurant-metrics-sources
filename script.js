@@ -5,7 +5,9 @@ let unlocked=Number(localStorage.getItem(unlockKey)||0);
 function stopMedia(){
   document.querySelectorAll('video').forEach(video=>{video.pause()});
   document.querySelectorAll('iframe[data-src]').forEach(frame=>{if(frame.src&&frame.src!=='about:blank')frame.src='about:blank'});
+  document.querySelectorAll('.video-embed').forEach(embed=>embed.classList.remove('is-playing'));
 }
+function playVideo(button){const embed=button.closest('.video-embed'),video=embed?.querySelector('video'),frame=embed?.querySelector('iframe');embed?.classList.add('is-playing');if(video){const result=video.play();result?.catch?.(()=>embed.classList.remove('is-playing'))}else if(frame){if(frame.src==='about:blank')frame.src=frame.dataset.src;setTimeout(()=>frame.contentWindow?.postMessage({method:'play'},'*'),450)}}
 function applyLocks(){
   document.querySelectorAll('.module-grid [data-page]').forEach(button=>{const locked=pages.indexOf(button.dataset.page)>unlocked;button.disabled=locked;button.setAttribute('aria-disabled',String(locked));const icon=button.querySelector('i');if(icon)icon.textContent=locked?'●':'→'});
 }
